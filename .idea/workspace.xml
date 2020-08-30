@@ -15,6 +15,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/shop" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -28,6 +31,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1fX6ilVv4LEZWzHgaedy0661Px4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -96,22 +100,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1598113763652" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1598697243107">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1598776705438">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598697243107" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1598697243107">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598776705438" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1598776705438">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598697243107" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1598697243107">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598776705438" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1598776705437">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598697243107" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1598697243107">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598776705437" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1598776705438">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598697243107" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598776705438" />
     <state x="490" y="180" key="Maven.ArtifactSearchDialog" timestamp="1597755552715">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
