@@ -1,8 +1,6 @@
 package com.eshop.eshop.controller;
 
-//import com.eshop.eshop.modal.Login;
 import com.eshop.eshop.modal.RegisterUser;
-//import com.eshop.eshop.service.LoginService;
 import com.eshop.eshop.service.RegisterUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
