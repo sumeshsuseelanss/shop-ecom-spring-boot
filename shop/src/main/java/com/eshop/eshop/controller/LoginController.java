@@ -25,6 +25,7 @@ public class LoginController {
                 return loginService.getByUserName(username);
         }
 
+
         @GetMapping("/users")
         public List<Login> getProductDetails(){
                 return loginService.getAllLoginDetails();

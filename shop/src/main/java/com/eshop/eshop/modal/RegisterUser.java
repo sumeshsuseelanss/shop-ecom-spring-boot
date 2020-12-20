@@ -1,5 +1,6 @@
 package com.eshop.eshop.modal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,7 @@ public class RegisterUser {
     private int mobileNumber;
     private String password;
 
-
+    @JsonIgnore
     @OneToOne(mappedBy = "Register")
     Login login;
 

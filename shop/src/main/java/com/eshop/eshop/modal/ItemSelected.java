@@ -19,6 +19,7 @@ public class ItemSelected {
    private String selected_item;
    private int item_count;
    private int item_price;
+   private String item_image;
    private String user_id;
 
     public int getSelected_item_id() {
@@ -58,5 +59,13 @@ public class ItemSelected {
 
     public void setUser_id(String user_id) {
         this.user_id = user_id;
+    }
+
+    public String getItem_image() {
+        return item_image;
+    }
+
+    public void setItem_image(String item_image) {
+        this.item_image = item_image;
     }
 }

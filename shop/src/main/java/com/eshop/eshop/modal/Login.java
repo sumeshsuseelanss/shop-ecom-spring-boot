@@ -1,5 +1,6 @@
 package com.eshop.eshop.modal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ public class Login {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //automatically generates primary key
     @Id
     private int userId;
+    @JsonIgnore
     @OneToOne
     @PrimaryKeyJoinColumn(name = "userId")
     RegisterUser Register;
