@@ -22,14 +22,24 @@ public class ArchieveItemController {
        return archieveItemService.addArchieve(Archieve);
    }
 
-    @RequestMapping(value="/itemsCount/{item}", method = RequestMethod.GET)
-    public @ResponseBody Long getCountByItems(@PathVariable("item") String item){
-        return archieveItemService.getCountByItems(item);
+    @RequestMapping(value="/itemsCount/{item}/{user_name}", method = RequestMethod.GET)
+    public @ResponseBody Long getCountByItems(@PathVariable("item") String item,@PathVariable("user_name") String user_name){
+        return archieveItemService.getCountByItems(item,user_name);
     }
 
     @RequestMapping(value="/items/{username}", method = RequestMethod.GET)
     public List<ItemSelected> getUserBasedItems(@PathVariable("username") String username){
         return archieveItemService.getItemUser(username);
+    }
+
+    @RequestMapping(value = "/delete/{item}/{user_name}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable("item") String item,@PathVariable("user_name") String user_name) {
+        archieveItemService.deleteItemUserName(item, user_name);
+    }
+
+    @RequestMapping(value="/items/total/{user_name}", method = RequestMethod.GET)
+    public int getTotalAmount(@PathVariable("user_name") String user_name){
+        return archieveItemService.getTotalAmount(user_name);
     }
 
 }

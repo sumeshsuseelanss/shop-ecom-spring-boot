@@ -33,10 +33,18 @@ public class ArchieveItemService {
         return itemForUser;
     }
 
-    public Long getCountByItems(String item){
-        Long itemSelCount = archiveItemRepository.countOfItem(item);
+    public Long getCountByItems(String item,String user_name){
+        Long itemSelCount = archiveItemRepository.countOfItem(item,user_name);
         System.out.println("itemSelCount ---> "+itemSelCount);
        return itemSelCount;
+    }
+
+    public void deleteItemUserName(String item,String user_name){
+        archiveItemRepository.deleteItemByUserName(item,user_name);
+    }
+
+    public int getTotalAmount(String userName){
+        return archiveItemRepository.getItemTotal(userName);
     }
 
 }

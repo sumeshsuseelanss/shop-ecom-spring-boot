@@ -16,6 +16,7 @@ public class ItemSelected {
   @GeneratedValue(strategy = GenerationType.IDENTITY) //automatically generates primary key
    @Id
    private int selected_item_id;
+   @Column(unique = true,name = "selected_item")
    private String selected_item;
    private int item_count;
    private int item_price;
