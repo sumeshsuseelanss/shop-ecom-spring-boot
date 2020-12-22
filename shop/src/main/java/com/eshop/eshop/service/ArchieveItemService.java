@@ -43,8 +43,11 @@ public class ArchieveItemService {
         archiveItemRepository.deleteItemByUserName(item,user_name);
     }
 
-    public int getTotalAmount(String userName){
-        return archiveItemRepository.getItemTotal(userName);
+    public String getTotalAmount(String userName){
+        System.out.println("totalAmount ---");
+        String totalAmount = archiveItemRepository.getItemTotal(userName);
+        System.out.println("totalAmount ---> "+totalAmount);
+        return totalAmount;
     }
 
 }

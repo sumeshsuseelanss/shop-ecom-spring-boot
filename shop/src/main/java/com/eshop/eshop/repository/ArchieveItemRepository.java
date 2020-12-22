@@ -18,7 +18,7 @@ public interface ArchieveItemRepository extends JpaRepository<ItemSelected, Inte
 
 
     @Query("select sum(u.item_price) from ItemSelected u WHERE u.user_id=?1")
-    int getItemTotal(String userName);
+    String getItemTotal(String userName);
 
 
 

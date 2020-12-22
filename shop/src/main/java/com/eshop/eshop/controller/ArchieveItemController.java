@@ -38,7 +38,7 @@ public class ArchieveItemController {
     }
 
     @RequestMapping(value="/items/total/{user_name}", method = RequestMethod.GET)
-    public int getTotalAmount(@PathVariable("user_name") String user_name){
+    public String getTotalAmount(@PathVariable("user_name") String user_name){
         return archieveItemService.getTotalAmount(user_name);
     }
 
