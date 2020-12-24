@@ -1,14 +1,12 @@
 package com.eshop.eshop.controller;
 
 import com.eshop.eshop.modal.Category;
+import com.eshop.eshop.modal.ItemSelected;
 import com.eshop.eshop.modal.Products;
 import com.eshop.eshop.service.CategoryService;
 import com.eshop.eshop.service.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,4 +23,10 @@ public class ProductsController {
     public List<Products> get() {
         return productService.getAllProducts();
     }
+
+    @RequestMapping(value="/products/{category}", method = RequestMethod.GET)
+    public List<Products> getFilteredCategory(@PathVariable("category") String category){
+        return productService.getFilteredCategory(category);
+    }
+
 }

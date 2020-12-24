@@ -19,4 +19,9 @@ public class ProductsService {
     public List<Products> getAllProducts() {
         return productsRepository.findAll();
     }
+
+    public List<Products> getFilteredCategory(String category){
+        return productsRepository.filterByCategory(category);
+    }
+
 }

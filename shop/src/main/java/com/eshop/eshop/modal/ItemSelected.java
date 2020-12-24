@@ -11,12 +11,13 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="ItemSelected")
+@Table(name="ItemSelected",
+        uniqueConstraints= @UniqueConstraint(columnNames = {"selected_item","user_id"}) )
 public class ItemSelected {
   @GeneratedValue(strategy = GenerationType.IDENTITY) //automatically generates primary key
    @Id
    private int selected_item_id;
-   @Column(unique = true,name = "selected_item")
+//   @Column(unique = true,name = "selected_item")
    private String selected_item;
    private int item_count;
    private int item_price;
