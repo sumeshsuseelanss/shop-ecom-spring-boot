@@ -1,6 +1,7 @@
 package com.eshop.eshop.controller;
 import com.eshop.eshop.modal.ItemSelected;
 import com.eshop.eshop.modal.Login;
+import com.eshop.eshop.modal.RegisterUser;
 import com.eshop.eshop.service.ArchieveItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -41,5 +42,18 @@ public class ArchieveItemController {
     public String getTotalAmount(@PathVariable("user_name") String user_name){
         return archieveItemService.getTotalAmount(user_name);
     }
+
+    @PutMapping(value="/items/update/{item}/{itemCount}/{user_name}")
+    public void updateCount(@RequestBody ItemSelected Archieve,@PathVariable("item") String item ,@PathVariable("itemCount")  int itemCount,
+                            @PathVariable("user_name") String user_name){
+         archieveItemService.updateItemCount(item,itemCount,user_name);
+    }
+
+    @PutMapping(value="/item/amountupdate/{item}/{itemAmount}/{user_name}")
+    public void amountUpdate(@RequestBody ItemSelected Archieve,@PathVariable("item") String item ,@PathVariable("itemAmount")  int itemAmount,
+                            @PathVariable("user_name") String user_name){
+        archieveItemService.amountUpdate(item,itemAmount,user_name);
+    }
+
 
 }

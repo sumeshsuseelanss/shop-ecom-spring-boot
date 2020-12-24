@@ -50,4 +50,12 @@ public class ArchieveItemService {
         return totalAmount;
     }
 
+    public void updateItemCount(String item , int count , String userName){
+           archiveItemRepository.updateItemCount(item,count,userName);
+    }
+
+    public void amountUpdate(String item , int amount , String userName){
+        archiveItemRepository.updateAmount(item,amount,userName);
+    }
+
 }
