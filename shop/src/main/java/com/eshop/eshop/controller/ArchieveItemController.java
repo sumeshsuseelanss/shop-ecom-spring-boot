@@ -28,6 +28,11 @@ public class ArchieveItemController {
         return archieveItemService.getCountByItems(item,user_name);
     }
 
+    @RequestMapping(value="/itemsCount/{user_name}", method = RequestMethod.GET)
+    public @ResponseBody Long getCartCount(@PathVariable("user_name") String user_name){
+        return archieveItemService.getCountByUser(user_name);
+    }
+
     @RequestMapping(value="/items/{username}", method = RequestMethod.GET)
     public List<ItemSelected> getUserBasedItems(@PathVariable("username") String username){
         return archieveItemService.getItemUser(username);

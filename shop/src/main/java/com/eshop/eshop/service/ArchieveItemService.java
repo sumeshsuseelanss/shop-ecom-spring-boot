@@ -39,6 +39,12 @@ public class ArchieveItemService {
        return itemSelCount;
     }
 
+    public Long getCountByUser (String user_name){
+        Long itemSelCount = archiveItemRepository.countCartItems(user_name);
+        System.out.println("itemSelCount ---> "+itemSelCount);
+        return itemSelCount;
+    }
+
     public void deleteItemUserName(String item,String user_name){
         archiveItemRepository.deleteItemByUserName(item,user_name);
     }
