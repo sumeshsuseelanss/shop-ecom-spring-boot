@@ -49,6 +49,10 @@ public class ArchieveItemService {
         archiveItemRepository.deleteItemByUserName(item,user_name);
     }
 
+    public void emptyCart(String user_name){
+        archiveItemRepository.emptyCart(user_name);
+    }
+
     public String getTotalAmount(String userName){
         System.out.println("totalAmount ---");
         String totalAmount = archiveItemRepository.getItemTotal(userName);

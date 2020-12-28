@@ -43,6 +43,11 @@ public class ArchieveItemController {
         archieveItemService.deleteItemUserName(item, user_name);
     }
 
+    @RequestMapping(value = "/delete/{user_name}", method = RequestMethod.DELETE)
+    public void emptyCart(@PathVariable("user_name") String user_name) {
+        archieveItemService.emptyCart(user_name);
+    }
+
     @RequestMapping(value="/items/total/{user_name}", method = RequestMethod.GET)
     public String getTotalAmount(@PathVariable("user_name") String user_name){
         return archieveItemService.getTotalAmount(user_name);

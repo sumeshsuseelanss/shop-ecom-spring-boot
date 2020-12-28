@@ -22,7 +22,7 @@ public class Address {
     private String country;
     private String state;
     private int zip;
-
+    private String user_ID;
 
     public int getAdd_ID() {
         return add_ID;
@@ -86,6 +86,13 @@ public class Address {
 
     public void setZip(int zip) {
         this.zip = zip;
+    }
+    public String getUser_ID() {
+        return user_ID;
+    }
+
+    public void setUser_ID(String user_ID) {
+        this.user_ID = user_ID;
     }
 
 

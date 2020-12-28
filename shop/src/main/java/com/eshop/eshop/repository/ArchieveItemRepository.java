@@ -20,6 +20,11 @@ public interface ArchieveItemRepository extends JpaRepository<ItemSelected, Inte
     @Query("DELETE FROM ItemSelected u WHERE u.selected_item=?1 and u.user_id=?2")
     void deleteItemByUserName(String selected_item,String user_name);
 
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM ItemSelected u WHERE u.user_id=?1")
+    void emptyCart(String user_name);
+
 
     @Query("select sum(u.item_price) from ItemSelected u WHERE u.user_id=?1")
     String getItemTotal(String userName);
