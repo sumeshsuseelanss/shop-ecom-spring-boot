@@ -3,6 +3,7 @@ package com.eshop.eshop.controller;
 import com.eshop.eshop.modal.Category;
 import com.eshop.eshop.modal.ItemSelected;
 import com.eshop.eshop.modal.Products;
+import com.eshop.eshop.modal.RegisterUser;
 import com.eshop.eshop.service.CategoryService;
 import com.eshop.eshop.service.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class ProductsController {
     @RequestMapping(value="/products/{category}", method = RequestMethod.GET)
     public List<Products> getFilteredCategory(@PathVariable("category") String category){
         return productService.getFilteredCategory(category);
+    }
+
+    @PostMapping("/postProduct")
+    public Products postProduct(@RequestBody Products product){
+        return productService.postProduct(product);
     }
 
 }

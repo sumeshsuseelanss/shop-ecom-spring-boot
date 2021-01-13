@@ -24,4 +24,8 @@ public class ProductsService {
         return productsRepository.filterByCategory(category);
     }
 
+    public Products postProduct(Products products){
+        return productsRepository.save(products);
+    }
+
 }

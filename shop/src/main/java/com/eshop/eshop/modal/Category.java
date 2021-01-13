@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name="Category")
 public class Category {
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //automatically generates primary key
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) //automatically generates primary key
     @Id
     private int catID;
     private String category;

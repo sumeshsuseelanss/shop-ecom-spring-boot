@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class Products {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int prodID;
     private String productName;
     private String Image;
