@@ -35,4 +35,17 @@ public class ProductsController {
         return productService.postProduct(product);
     }
 
+
+    @RequestMapping(value = "/product/delete/{id}", method = RequestMethod.DELETE)
+    public void deleteById(@PathVariable("id") int id) {
+        System.out.println("delete id from product ----> "+id);
+        productService.deleteItemUserNameById(id);
+    }
+
+    @PutMapping("/updateProduct/{id}/{productName}")
+    public void updateProduct(@RequestBody Products product,@PathVariable int id, @PathVariable String productName) {
+         productService.putProductName(id,productName);
+
+    }
+
 }
