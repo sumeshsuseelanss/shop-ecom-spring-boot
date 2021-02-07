@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -18,25 +19,12 @@ public class OrderTrack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int trackID;
-    private String productName;
-    private String Image;
-    private String price;
-    private String descriptions;
-    private String Category;
+    private String orderedItem;
     private String totalAmount;
-    private long orderID;
+    private String orderID;
     private String user_ID;
     @Temporal(TemporalType.TIMESTAMP)
     Date orderDate;
-
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public int getTrackID() {
         return trackID;
@@ -46,44 +34,12 @@ public class OrderTrack {
         this.trackID = trackID;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getOrderedItem() {
+        return orderedItem;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getImage() {
-        return Image;
-    }
-
-    public void setImage(String image) {
-        Image = image;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getDescriptions() {
-        return descriptions;
-    }
-
-    public void setDescriptions(String descriptions) {
-        this.descriptions = descriptions;
-    }
-
-    public String getCategory() {
-        return Category;
-    }
-
-    public void setCategory(String category) {
-        Category = category;
+    public void setOrderedItem(String orderedItem) {
+        this.orderedItem = orderedItem;
     }
 
     public String getTotalAmount() {
@@ -94,11 +50,11 @@ public class OrderTrack {
         this.totalAmount = totalAmount;
     }
 
-    public long getOrderID() {
+    public String getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(long orderID) {
+    public void setOrderID(String orderID) {
         this.orderID = orderID;
     }
 
@@ -110,5 +66,11 @@ public class OrderTrack {
         this.user_ID = user_ID;
     }
 
-    
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
 }
